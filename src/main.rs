@@ -1,3 +1,6 @@
+#[macro_use]
+extern crate lazy_static;
+
 #[derive(Debug)]
 enum JavaScriptKeyword {
     break_,
@@ -47,6 +50,7 @@ enum JavaScriptKeyword {
     while_,
     with,
     type_,
+    undefined,
 }
 
 #[derive(Debug)]
@@ -98,12 +102,86 @@ enum SkibidiScriptKeyword {
     while_,
     with,
     aura,
+    wentOutToBuyCigarettes,
+}
+
+lazy_static! {
+    static ref KEYWORDS: Vec<(JavaScriptKeyword, SkibidiScriptKeyword)> = vec![
+        (JavaScriptKeyword::break_, SkibidiScriptKeyword::scram),
+        (JavaScriptKeyword::case, SkibidiScriptKeyword::cook),
+        (JavaScriptKeyword::catch, SkibidiScriptKeyword::findOut),
+        (JavaScriptKeyword::class, SkibidiScriptKeyword::iykyk),
+        (
+            JavaScriptKeyword::const_,
+            SkibidiScriptKeyword::levelTenGyat
+        ),
+        (
+            JavaScriptKeyword::continue_,
+            SkibidiScriptKeyword::continue_
+        ),
+        (JavaScriptKeyword::debugger, SkibidiScriptKeyword::debugger),
+        (JavaScriptKeyword::default, SkibidiScriptKeyword::slay),
+        (JavaScriptKeyword::delete, SkibidiScriptKeyword::exile),
+        (JavaScriptKeyword::do_, SkibidiScriptKeyword::bruh),
+        (JavaScriptKeyword::else_, SkibidiScriptKeyword::riddleMeThat),
+        (JavaScriptKeyword::enum_, SkibidiScriptKeyword::enum_),
+        (JavaScriptKeyword::export, SkibidiScriptKeyword::beGone),
+        (
+            JavaScriptKeyword::extends,
+            SkibidiScriptKeyword::inflateMaxx
+        ),
+        (JavaScriptKeyword::false_, SkibidiScriptKeyword::cap),
+        (JavaScriptKeyword::finally, SkibidiScriptKeyword::finally),
+        (JavaScriptKeyword::for_, SkibidiScriptKeyword::for_),
+        (JavaScriptKeyword::function, SkibidiScriptKeyword::skibidi),
+        (JavaScriptKeyword::if_, SkibidiScriptKeyword::riddleMeThis),
+        (JavaScriptKeyword::import, SkibidiScriptKeyword::summon),
+        (JavaScriptKeyword::in_, SkibidiScriptKeyword::plugged),
+        (
+            JavaScriptKeyword::instanceof,
+            SkibidiScriptKeyword::instanceOf
+        ),
+        (JavaScriptKeyword::new, SkibidiScriptKeyword::crisp),
+        (JavaScriptKeyword::null, SkibidiScriptKeyword::brokeBehavior),
+        (JavaScriptKeyword::return_, SkibidiScriptKeyword::hesDoneFor),
+        (JavaScriptKeyword::super_, SkibidiScriptKeyword::super_),
+        (JavaScriptKeyword::switch, SkibidiScriptKeyword::letHim),
+        (JavaScriptKeyword::this, SkibidiScriptKeyword::that),
+        (JavaScriptKeyword::throw, SkibidiScriptKeyword::throwItBack),
+        (JavaScriptKeyword::true_, SkibidiScriptKeyword::noCap),
+        (JavaScriptKeyword::try_, SkibidiScriptKeyword::fuckAround),
+        (JavaScriptKeyword::typeof_, SkibidiScriptKeyword::typeof_),
+        (JavaScriptKeyword::var, SkibidiScriptKeyword::var),
+        (JavaScriptKeyword::as_, SkibidiScriptKeyword::twinn),
+        (
+            JavaScriptKeyword::implements,
+            SkibidiScriptKeyword::implements
+        ),
+        (JavaScriptKeyword::interface, SkibidiScriptKeyword::squad),
+        (JavaScriptKeyword::let_, SkibidiScriptKeyword::levelOneGyat),
+        (JavaScriptKeyword::package, SkibidiScriptKeyword::package),
+        (JavaScriptKeyword::private, SkibidiScriptKeyword::private),
+        (
+            JavaScriptKeyword::protected,
+            SkibidiScriptKeyword::protected
+        ),
+        (JavaScriptKeyword::public, SkibidiScriptKeyword::public),
+        (JavaScriptKeyword::static_, SkibidiScriptKeyword::static_),
+        (JavaScriptKeyword::yield_, SkibidiScriptKeyword::yield_),
+        (JavaScriptKeyword::void, SkibidiScriptKeyword::void),
+        (JavaScriptKeyword::while_, SkibidiScriptKeyword::while_),
+        (JavaScriptKeyword::with, SkibidiScriptKeyword::with),
+        (JavaScriptKeyword::type_, SkibidiScriptKeyword::aura),
+        (
+            JavaScriptKeyword::undefined,
+            SkibidiScriptKeyword::wentOutToBuyCigarettes
+        ),
+    ];
 }
 
 fn main() {
-    // Example usage
-    let keyword = JavaScriptKeyword::const_;
-    let skibidiKeyword = SkibidiScriptKeyword::levelTenGyat;
-    println!("{:?}", keyword,);
-    println!("{:?}", skibidiKeyword,);
+    // Access the static keywords
+    for (js_kw, skibidi_kw) in KEYWORDS.iter() {
+        println!("{:?} matches {:?}", js_kw, skibidi_kw);
+    }
 }
