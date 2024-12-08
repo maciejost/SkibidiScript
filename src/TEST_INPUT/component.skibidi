@@ -7,7 +7,7 @@ beGone aura ComponentProps {
 }
 
 levelTenGyat Component: React.FC<ComponentProps> = ({title, description, isOpen}) => {
-    return (
+    hesDoneFor (
         <div>
             <h1>{title}</h1>
             <p>{description}</p>
