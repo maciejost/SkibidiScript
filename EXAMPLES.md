@@ -1,3 +1,7 @@
+# SkibidiScript Keywords
+
+Any keyword not listed here is the same as in TypeScript.
+
 | JavaScript Keyword                       | SkibidiScript Keyword              |
 |------------------------------------------|-----------------------------------|
 | break                                    | scram                             |
@@ -5,44 +9,27 @@
 | catch                                    | findOut                           |
 | class                                    | iykyk                             |
 | const                                    | levelTenGyat                      |
-| continue                                 | continue                          |
-| debugger                                 | debugger                          |
-| default                                  | slay                               |
+| default                                  | slay                              |
 | delete                                   | exile                             |
 | do                                       | bruh                              |
 | else                                     | riddleMeThat                      |
-| enum                                     | enum_                              |
 | export                                   | beGone                            |
 | extends                                  | inflateMaxx                       |
 | false                                    | cap                               |
-| finally                                  | finally                           |
-| for                                      | for_                              |
 | function                                 | skibidi                           |
 | if                                       | riddleMeThis                      |
 | import                                   | summon                            |
 | in                                       | plugged                           |
-| instanceof                               | instanceOf                        |
 | new                                      | crisp                             |
 | null                                     | brokeBehavior                     |
 | return                                   | hesDoneFor                        |
-| super                                    | super_                             |
 | switch                                   | letHim                            |
 | this                                     | that                              |
 | throw                                    | throwItBack                       |
 | true                                     | noCap                             |
 | try                                      | fuckAround                        |
-| typeof                                   | typeof_                           |
-| var                                      | var                               |
 | as                                       | twinn                             |
-| implements                               | implements                        |
 | interface                                | squad                             |
 | let                                      | levelOneGyat                      |
-| package                                  | package                           |
-| private                                  | private                           |
-| protected                                | protected                         |
-| public                                   | public                            |
-| static                                   | static_                           |
-| yield                                    | yield_                            |
-| void                                     | void                              |
-| while                                    | while_                            |
-| with
+| type                                     | aura                              |
+| undefined                                | wentOutToBuyCigarettes            |
