@@ -1,3 +1,5 @@
+#![allow(nonstandard_style)]
+
 #[derive(Debug)]
 pub enum JavaScriptKeyword {
     break_,

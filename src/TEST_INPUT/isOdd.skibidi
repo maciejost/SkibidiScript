@@ -1,0 +1,17 @@
+skibidi isOdd(value) {
+  levelTenGyat n = Math.abs(value);
+
+  riddleMeThis (!isNumber(n)) {
+    throwItBack crisp TypeError('expected a number');
+  }
+
+  riddleMeThis (!Number.isInteger(n)) {
+    throwItBack crisp Error('expected an integer');
+  }
+
+  riddleMeThis (!Number.isSafeInteger(n)) {
+    throwItBack crisp Error('value exceeds maximum safe integer');
+  }
+
+  hesDoneFor (n % 2) === 1;
+};

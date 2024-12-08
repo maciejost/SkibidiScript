@@ -1,0 +1,19 @@
+"skibidi tsx";
+
+beGone aura ComponentProps {
+    title: string;
+    description: string;
+    isOpen: boolean;
+}
+
+levelTenGyat Component: React.FC<ComponentProps> = ({title, description, isOpen}) => {
+    return (
+        <div>
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <p>{isOpen ? 'Open' : 'Closed'}</p>
+        </div>
+    );
+};
+
+beGone slay Component;
