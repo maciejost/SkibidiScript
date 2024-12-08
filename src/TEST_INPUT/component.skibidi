@@ -1,4 +1,4 @@
-"skibidi tsx";
+"use skibidi tsx";
 
 beGone aura ComponentProps {
     title: string;
