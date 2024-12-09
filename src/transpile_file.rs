@@ -4,6 +4,7 @@ use std::io::{self, BufRead, BufReader};
 use std::path::{Path, PathBuf};
 
 use crate::keywords::js_keyword;
+use crate::transpile_to_js;
 
 fn create_ts_file(file_path: &Path) -> io::Result<PathBuf> {
     let file = File::open(file_path)?;
@@ -12,11 +13,9 @@ fn create_ts_file(file_path: &Path) -> io::Result<PathBuf> {
 
     let first_line = lines.next().unwrap_or(Ok(String::new()))?;
 
-    let extension = if first_line.trim() == "\"use skibidi tsx\";" {
-        "tsx"
-    } else {
-        "ts"
-    };
+    let is_tsx = first_line.trim() == "\"use skibidi tsx\";";
+
+    let extension = if is_tsx { "tsx" } else { "ts" };
 
     let new_file_path = file_path.with_extension(extension);
 
@@ -45,7 +44,13 @@ pub fn main(file_path: &Path) -> io::Result<()> {
 
     let new_file = create_ts_file(file_path)?;
 
-    fs::write(new_file, transpiled_content)?;
+    fs::write(&new_file, transpiled_content)?;
+
+    println!("Transpiled to: {}", new_file.display());
+
+    transpile_to_js::main(&new_file);
+
+    fs::remove_file(&new_file)?;
 
     Ok(())
 }

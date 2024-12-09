@@ -4,6 +4,7 @@ use std::path::Path;
 mod find_files;
 mod keywords;
 mod transpile_file;
+mod transpile_to_js;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -20,9 +21,6 @@ fn main() {
                 println!("No SkibidiScript files found in the directory.");
             } else {
                 for file in &files {
-                    // TODO: Implementer funksjon som kjører swc på direcotryen, og skriver resultatet til en dist.js-fil
-                    // TODO: Fjern ts/tsx-filer etter at swc har kjørt
-
                     if let Err(e) = transpile_file::main(file) {
                         eprintln!("Failed to read {}: {}", file.display(), e);
                     }

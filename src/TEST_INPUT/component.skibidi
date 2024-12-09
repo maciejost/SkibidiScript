@@ -1,6 +1,6 @@
 "use skibidi tsx";
 
-beGone aura ComponentProps {
+beGone aura ComponentProps = {
     title: string;
     description: string;
     isOpen: boolean;
