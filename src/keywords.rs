@@ -1,3 +1,4 @@
+#![allow(nonstandard_style)]
 use std::collections::HashMap;
 use std::str::FromStr;
 
