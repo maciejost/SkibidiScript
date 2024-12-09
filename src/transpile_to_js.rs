@@ -89,5 +89,5 @@ pub fn main(input_path: &PathBuf) {
 
     let printed = CodeGenerator::new().build(&program).code;
 
-    fs::write(&new_file, printed);
+    fs::write(&new_file, printed).unwrap_or_else(|err| panic!("Failed to write to file.\n{err}"));
 }
