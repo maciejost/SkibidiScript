@@ -12,7 +12,7 @@ directive on the first line, akin to React 19´s `"use client"` and `"use server
 
 ### Transpiling
 The program takes a path to a directory containing `.skibidi` files and transpiles them down to TypeScript. The transpiled files are
-then transpiled once more to JavaScript using the swc. The transpiled files are placed in a `dist` directory in the input directory.
+then transformed to JavaScript using OXC.
 
 To run the program, use the following command:
 ```bash
